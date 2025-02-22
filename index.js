@@ -22,7 +22,7 @@ app.use(express.json()); // Parse JSON request bodies
 const BetaAccessSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
-  linkedIn: { type: String, default: "" },
+  linkedin: { type: String, default: "" },
   role: { type: String },
 });
 
