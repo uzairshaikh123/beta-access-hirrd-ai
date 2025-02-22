@@ -31,7 +31,7 @@ const BetaAccess = mongoose.model("beta_access", BetaAccessSchema);
 // Route to handle beta access form submission
 app.post("/beta-access", async (req, res) => {
   try {
-    const { name, email, linkedIn, role } = req.body;
+    const { name, email, linkedin, role } = req.body;
 
     // Basic validation
     if (!name || !email) {
@@ -44,7 +44,7 @@ app.post("/beta-access", async (req, res) => {
     const newRequest = new BetaAccess({
       name,
       email,
-      linkedIn,
+      linkedin,
       role,
     });
     await newRequest.save();
